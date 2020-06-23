@@ -1,10 +1,10 @@
 
 var tileImages = ['tile1.jpg', 'tile2.jpg', 'tile3.jpg', 'tile4.jpg', 'tile5.jpg', 'tile6.jpg'];
-        var gameboard = document.getElementById("gameboard");
-        var messageTop = document.getElementById("message");
-        var buttonmessage = document.getElementById("gamecontrol");
-        var mytime = document.getElementById("mytime");
-        var cardsflippedover = 0
+var gameboard = document.getElementById("gameboard");
+var messageTop = document.getElementById("message");
+var buttonmessage = document.getElementById("gamecontrol");
+var mytime = document.getElementById("mytime");
+var cardsflippedover = 0
             , lastcardpicked = -1
             , timer = ''
             , score = 0
@@ -14,12 +14,12 @@ var tileImages = ['tile1.jpg', 'tile2.jpg', 'tile3.jpg', 'tile4.jpg', 'tile5.jpg
             , minutes = 0
             , hours = 0
             , t, gamescore = 100;
-        var solutionArray = tileImages.concat(tileImages);
+var solutionArray = tileImages.concat(tileImages);
         document.getElementById("gamecontrol").addEventListener("click", startGame);
         fliparray = new Array();
         startGame();
 
-        function startGame() {
+function startGame() {
             clearInterval(timer);
             timerX();
             seconds = 0, mseconds = 0, minutes = 0, hours = 0, gamescore = 100;
@@ -31,9 +31,9 @@ var tileImages = ['tile1.jpg', 'tile2.jpg', 'tile3.jpg', 'tile4.jpg', 'tile5.jpg
             for (var i = 0; i <= ((solutionArray.length) - 1); i++) {
                 gameboard.innerHTML += '<div class="col-md-3 col-xs-4 gametile"><img id="cardz' + i + '" src="img/back.jpg" onclick="pickCard(\'' + solutionArray[i] + '\',\'' + i + '\',this);return false;" class="flipimage"></div>';
             }
-        }
+}
 
-        function pickCard(a, b, c) {
+function pickCard(a, b, c) {
             if (cardsflippedover < 2 && lastcardpicked != b) {
                 fliparray[cardsflippedover] = solutionArray[b];
                 fliparray[(cardsflippedover + 2)] = c.id;
@@ -41,7 +41,7 @@ var tileImages = ['tile1.jpg', 'tile2.jpg', 'tile3.jpg', 'tile4.jpg', 'tile5.jpg
                 c.src = 'img/' + solutionArray[b];
                 if (cardsflippedover == 2) {
                     if (fliparray[0] == fliparray[1]) {
-                        messageText("Match FOUND");
+                        messageText("Match");
                         console.log('same');
                         pickagain();
                         score++;
@@ -53,23 +53,23 @@ var tileImages = ['tile1.jpg', 'tile2.jpg', 'tile3.jpg', 'tile4.jpg', 'tile5.jpg
                     else {
                         timer = setInterval(hideCard, 3000);
                         console.log('different');
-                        messageText("NOT FOUND");
+                        messageText("Try Again");
                     }
                 }
                 lastcardpicked = b;
             }
-        }
+}
 
-        function messageText(message) {
+function messageText(message) {
             clearInterval(mess);
             console.log('message');
             messageTop.innerHTML = message;
             if (message != 'Find a match') {
                 mess = setInterval(messageText, 1000, 'Find a match');
             }
-        }
+}
 
-        function addTime() {
+function addTime() {
             gamescore--;
             seconds++;
             if (seconds >= 60) {
@@ -82,28 +82,28 @@ var tileImages = ['tile1.jpg', 'tile2.jpg', 'tile3.jpg', 'tile4.jpg', 'tile5.jpg
             }
             mytime.textContent = (hours ? (hours > 9 ? hours : "0" + hours) : "00") + ":" + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);
             timerX();
-        }
+}
 
-        function timerX() {
+function timerX() {
             t = setTimeout(addTime, 1000);
-        }
+}
 
-        function gameDone() {
+function gameDone() {
             if (gamescore < 0) {
                 gamescore = 0;
             }
-            messageText("GAME OVER<BR>THANKS for PLAYINGM<BR>You scored = " + gamescore);
+            messageText("GAME OVER<BR>THANKS for PLAYING<BR>You scored = " + gamescore);
             buttonmessage.innerHTML = "Click to Play Again";
-        }
+}
 
-        function pickagain() {
+function pickagain() {
             cardsflippedover = 0;
             fliparray = [];
             lastcardpicked = -1;
             clearInterval(timer);
-        }
+}
 
-        function hideCard() {
+function hideCard() {
             console.log(fliparray);
             if (fliparray[2]) {
                 document.getElementById(fliparray[2]).src = "img/back.jpg";
@@ -112,9 +112,9 @@ var tileImages = ['tile1.jpg', 'tile2.jpg', 'tile3.jpg', 'tile4.jpg', 'tile5.jpg
                 document.getElementById(fliparray[3]).src = "img/back.jpg";
             }
             pickagain();
-        }
+}
 
-        function shuffleArray(d) {
+function shuffleArray(d) {
             for (var c = d.length - 1; c > 0; c--) {
                 var b = Math.floor(Math.random() * (c + 1));
                 var a = d[c];
@@ -122,4 +122,4 @@ var tileImages = ['tile1.jpg', 'tile2.jpg', 'tile3.jpg', 'tile4.jpg', 'tile5.jpg
                 d[b] = a;
             }
             return d
-        };
+};
