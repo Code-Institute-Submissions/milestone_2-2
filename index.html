@@ -2,69 +2,68 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Dog Match</title>
-    <meta name="description" content="page description">
-    <meta name="author" content="discoveryvip">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Dog Match</title>
+	<meta name="description" content="page description">
+	<meta name="author" content="discoveryvip">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" />    
-    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+		type="text/css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
-<script type="text/javascript">
-	(function(){
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+	<script type="text/javascript">
+		(function(){
       emailjs.init("user_NihxeP1f0AUGV5O0TrAHF");
    })();
-</script>
+	</script>
 
-</head> 
- 
-<body >
+</head>
 
-<nav>
-   
-    <div class="nav-wrapper teal">
-      <a href="#!" class="brand-logo center site_title">Dog Match</a>
-      <ul class="right hide-on-med-and-down">
-        <li><a class="waves-effect waves-light btn teal lighten-3">New Game</a></li>
-        <li><a class="waves-effect waves-light btn teal lighten-3">Subscribe</a></li>
-      </ul>
-    </div>
-  
-  </nav>
-    <div id="wrapper" class="container">
-        <div id="message">Press Play to Start</div>
-        <div id="gameboard"> Test </div>
-        <div class="row text-center">
-            <div id="gamecontrol" class="btn btn-default">Play</div>
-        </div>
-    </div>
+<body>
 
-<footer class="page-footer teal">
-	<div class="container">
-		<div class="row">
-			<div class="col l4 offset-l2 s12">
-				<h5 class="white-text">Subscribe for more games</h5>
-				<form onsubmit="return sendMail(this);">
-					<div class="row">
-						<div class="input-field col s12">
-							<input type="text" name="emailaddress" class="form-control" id="emailaddress" placeholder="Email" required/>
-					    
-                            <button type="submit" class="btn btn-secondary center-block"><i class="material-icons right">email</i>Submit
-			            </div>
-			        </div>
-			    </form>
-			</div>
+	<nav>
+
+		<div class="nav-wrapper teal">
+			<p class="brand-logo title center">Dog Match</p>
+
+		</div>
+
+	</nav>
+
+	<div id="wrapper" class="container">
+		<div id="message" class="center">
+			<h3>Click a dog to start matching</h3>
+		</div>
+		<div id="gameboard"></div>
+		<div class="row text-center">
+			<div id="gamecontrol" class="btn btn-default teal white-text">New Game</div>
 		</div>
 	</div>
-			
-</footer>
+    
 
-<script src="js/tiles.js"></script>
-<script src="js/sendEmail.js"></script>
+	<footer class="page-footer teal">
+		<div class="container">
+			<div class="row">
+				<div class="col l4 s12 left">
+					<h3 class="white-text subscribe">Subscribe for more games</h3>
+				</div>
+				<div class="input-field col s12 l4 white-text center">
+					<form onsubmit="return sendMail(this);">
+						<input type="text" name="emailaddress" class="form-control white-text" id="emailaddress" placeholder="Email" required/></form>
+				</div>
+				<div class="col l4 s12 right">
+					<button type="submit" class="btn btn-secondary center-block"><i class="material-icons right">email</i>Submit
+            </div>   
+        </div>
+    </footer>
+				
+
+    <script src="assets/js/tiles.js"></script>
+    <script src="assets/js/sendEmail.js"></script>
 </body>
 </html>
