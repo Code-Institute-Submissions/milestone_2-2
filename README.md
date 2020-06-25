@@ -41,15 +41,21 @@ Please refer to the wireframes directory for individual page wireframes.
 ### Languages Used:
 
 **HTML** – used to structure the site.
+
 **CSS** – used to style the site.
+
 **Javascript** - used for the interactive elements on the site.
+
 **Materialize** – used to style, structure and create a responsive site.
 
 ### Other
 
 **GitHub** - used to deploy the project.
+
 **Gitpod** - used to write the project code.
+
 **Microsoft Word** – used to create the wireframes for the project.
+
 **EmailJS** – used to send users email address to developer to add to subscription list.
 
 ## Testing
