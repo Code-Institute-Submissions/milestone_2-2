@@ -2,7 +2,7 @@
 
 Deployed app: ……………………..
 
-## The brief for this project was –
+### The brief for this project was –
 
 **Build a memory game:**
 
