@@ -38,7 +38,7 @@ Please refer to the wireframes directory for individual page wireframes.
 
 ## Technologies Used
 
-### Languages Used:
+### Languages Used
 
 **HTML** – used to structure the site.
 
@@ -69,7 +69,7 @@ Please refer to the wireframes directory for individual page wireframes.
 *	**Subscribe to email:** Tested when setting up this function in emailJS, no errors. Testing during the project and errors found. 
     Tested at the end of the project and found to have errors. See Debugging section for solutions.
 
-## Debugging:
+## Debugging
 
 **Bug:** While playing when first building the project, the cards were flipping back over at such a speed that they weren’t being 
         to the user and weren’t being shown as not a match.
@@ -87,7 +87,7 @@ Please refer to the wireframes directory for individual page wireframes.
 **Solution:** The <form> end tag had been edited to the wrong place. Moved the </form> tag to include the submit button.
 
 
-## Responsiveness of site:
+## Responsiveness of site
 
 To aid in creating a responsive site, I used a header and a footer from Materialize. 
 During the building of the game, I have checked various screen sizes and, whilst the game is too tricky to play to be phone compatible, 
