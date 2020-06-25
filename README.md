@@ -84,7 +84,7 @@ Please refer to the wireframes directory for individual page wireframes.
 
 **Bug:** The subscribe to email function was not sending the email template through (at the end of the project build).
 
-**Solution:** The <form> end tag had been edited to the wrong place. Moved the </form> tag to include the submit button.
+**Solution:** The form closing tag had been edited to the wrong place. Moved the form closing tag to include the submit button.
 
 
 ## Responsiveness of site
