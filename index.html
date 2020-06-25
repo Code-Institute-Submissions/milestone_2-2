@@ -14,18 +14,18 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
 		type="text/css" />
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
-	<script type="text/javascript">
-		(function(){
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+    <script type="text/javascript">
+   (function(){
       emailjs.init("user_NihxeP1f0AUGV5O0TrAHF");
    })();
-	</script>
+    </script>
+
 
 </head>
 
 <body>
-
+<!-- Header -->
 	<nav>
 
 		<div class="nav-wrapper teal">
@@ -35,6 +35,7 @@
 
 	</nav>
 
+<!-- Gameboard -->
 	<div id="wrapper" class="container">
 		<div id="message" class="center">
 			<h3>Click a dog to start matching</h3>
@@ -45,7 +46,7 @@
 		</div>
 	</div>
     
-
+<!-- Footer-->
 	<footer class="page-footer teal">
 		<div class="container">
 			<div class="row">
@@ -54,10 +55,11 @@
 				</div>
 				<div class="input-field col s12 l4 white-text center">
 					<form onsubmit="return sendMail(this);">
-						<input type="text" name="emailaddress" class="form-control white-text" id="emailaddress" placeholder="Email" required/></form>
+						<input type="text" name="emailaddress" class="form-control white-text" id="emailaddress" placeholder="Email" required/>
 				</div>
 				<div class="col l4 s12 right">
 					<button type="submit" class="btn btn-secondary center-block"><i class="material-icons right">email</i>Submit
+                    </form>
             </div>   
         </div>
     </footer>
