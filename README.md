@@ -113,4 +113,10 @@ Having completed my project, I pushed to GitHub as the final stage of deployment
 #### Acknowledgements
 *	This project was written and altered using a tutorial by Laurence Svekis on Udemy. 
 
+<<<<<<< HEAD
  
+=======
+ 
+
+
+>>>>>>> e40404036b35a1b4c5532353ed87aa3f1111e109
