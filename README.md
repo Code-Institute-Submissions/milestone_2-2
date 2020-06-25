@@ -15,9 +15,9 @@ With this in mind, I created a card matching memory game where the user has to m
 
 ## UX
 The user stories are -
-*•	I want to click the cards to flip them over and find the right pairs.
-*•	I want to challenge my memory.
-*•	I want to be notified about future game releases.
+*	I want to click the cards to flip them over and find the right pairs.
+*	I want to challenge my memory.
+*	I want to be notified about future game releases.
 
 ## Wireframes
 Please refer to the wireframes directory for individual page wireframes. 
@@ -25,16 +25,16 @@ Please refer to the wireframes directory for individual page wireframes.
 ## Features
 
 ### Existing Features
-*•	**Heading text:** Instructs the user how to start playing.
-*•	**Gameboard:** Allows the user flip cards over and play the game.
-*•	**New Game:** Allows the user start a new game.
-*•	**Subscribe function:** Allows the user to input their email address, to subscribe to the developer in order to get updates of new games.
-*•	**Confirmation email:** Tells users that they have successfully subscribed to the service. 
+*	**Heading text:** Instructs the user how to start playing.
+*	**Gameboard:** Allows the user flip cards over and play the game.
+*	**New Game:** Allows the user start a new game.
+*	**Subscribe function:** Allows the user to input their email address, to subscribe to the developer in order to get updates of new games.
+*	**Confirmation email:** Tells users that they have successfully subscribed to the service. 
 
 ## Features Left to Implement
-*•	Adding a score element and a highest score table to the game so that players can try to beat previous scores or other players.
-*•	Adding harder levels to the game to make it more challenging.
-*•	Add interactive aspects to the end of the game in order to continue, level up or close the game. 
+*	Adding a score element and a highest score table to the game so that players can try to beat previous scores or other players.
+*	Adding harder levels to the game to make it more challenging.
+*	Add interactive aspects to the end of the game in order to continue, level up or close the game. 
 
 ## Technologies Used
 
@@ -54,26 +54,32 @@ Please refer to the wireframes directory for individual page wireframes.
 
 ## Testing
 
-*•	**New game button:** Tested several times throughout the project and found to work each time.
-*•	**Card flip:** Tested by playing the game and clicked cards flipped over.
-*•	**Card Match:**  Tested in the console log as the game was being built. Tested in the final project by playing the game 
+*	**New game button:** Tested several times throughout the project and found to work each time.
+*	**Card flip:** Tested by playing the game and clicked cards flipped over.
+*	**Card Match:**  Tested in the console log as the game was being built. Tested in the final project by playing the game 
     and cards did not flip back once deemed to be a match.
-*•	**No Card Match:** Tested in the console log as the game was being built. Tested in the final project by playing the game 
+*	**No Card Match:** Tested in the console log as the game was being built. Tested in the final project by playing the game 
     and found that cards did flip back over once deemed to not be a match.
-*•	**Subscribe to email:** Tested when setting up this function in emailJS, no errors. Testing during the project and errors found. 
+*	**Subscribe to email:** Tested when setting up this function in emailJS, no errors. Testing during the project and errors found. 
     Tested at the end of the project and found to have errors. See Debugging section for solutions.
 
 ## Debugging:
 
 **Bug:** While playing when first building the project, the cards were flipping back over at such a speed that they weren’t being 
         to the user and weren’t being shown as not a match.
+        
 **Solution:** I added a timer interval to my else statement 
 
+
 **Bug:** The subscribe to email function was not sending the email template through (midway through the project build).
+
 **Solution:** Connection between EmailJS and Gmail had been lost. This was fixed by re-establishing the connection.
 
+
 **Bug:** The subscribe to email function was not sending the email template through (at the end of the project build).
+
 **Solution:** The <form> end tag had been edited to the wrong place. Moved the </form> tag to include the submit button.
+
 
 ## Responsiveness of site:
 
@@ -91,15 +97,15 @@ Having completed my project, I pushed to GitHub as the final stage of deployment
 ## Credits
 
 #### Content
-*•	This project was written and altered using a tutorial by Laurence Svekis on Udemy. 
-*•	Materialise was utilised for the styling of this project.
-*•	Guidance on the layout and functions were obtained from queries on Slack.
+*	This project was written and altered using a tutorial by Laurence Svekis on Udemy. 
+*	Materialise was utilised for the styling of this project.
+*	Guidance on the layout and functions were obtained from queries on Slack.
 
 #### Media
-*•	All photos used in this site are from Google Images.
+*	All photos used in this site are from Google Images.
 
 #### Acknowledgements
-*•	This project was written and altered using a tutorial by Laurence Svekis on Udemy. 
+*	This project was written and altered using a tutorial by Laurence Svekis on Udemy. 
 
  
 
