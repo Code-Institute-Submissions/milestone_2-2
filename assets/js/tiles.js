@@ -1,19 +1,26 @@
+// HTML elements
 
-var tileImages = ['tile1.jpg', 'tile2.jpg', 'tile3.jpg', 'tile4.jpg', 'tile5.jpg', 'tile6.jpg'];
+
 var gameboard = document.getElementById("gameboard");
-var messageTop = document.getElementById("message");
 var buttonmessage = document.getElementById("gamecontrol");
 
+// Game elements
+
+var tileImages = ['tile1.jpg', 'tile2.jpg', 'tile3.jpg', 'tile4.jpg', 'tile5.jpg', 'tile6.jpg'];
 var cardsflippedover = 0
             , lastcardpicked = -1
-            
-            
-            
-            
+        var solutionArray = tileImages.concat(tileImages);
+        document.getElementById("gamecontrol").addEventListener("click", startGame);
+        fliparray = new Array();
+        startGame();
+
 var solutionArray = tileImages.concat(tileImages);
         document.getElementById("gamecontrol").addEventListener("click", startGame);
         fliparray = new Array();
         startGame();
+
+        
+// Start the game
 
 function startGame() {
             shuffleArray(solutionArray);
@@ -21,7 +28,9 @@ function startGame() {
             for (var i = 0; i <= ((solutionArray.length) - 1); i++) {
                 gameboard.innerHTML += '<div class="col-md-3 col-xs-4 gametile"><img id="cardz' + i + '" src="assets/img/back.jpg" onclick="pickCard(\'' + solutionArray[i] + '\',\'' + i + '\',this);return false;" class="flipimage"></div>';
             }
-}
+        }
+
+// Card match check      
 
 function pickCard(a, b, c) {
             if (cardsflippedover < 2 && lastcardpicked != b) {
@@ -31,45 +40,30 @@ function pickCard(a, b, c) {
                 c.src = 'assets/img/' + solutionArray[b];
                 if (cardsflippedover == 2) {
                     if (fliparray[0] == fliparray[1]) {
+                        
                         console.log('same');
                         pickagain();
-                        score++;
                         if (tileImages.length <= score) {
                             console.log('END GAME');
                             gameDone();
                         }
                     }
                     else {
-                        timer = setInterval(hideCard, 3000);
-                        console.log('different');
+                        timer = setInterval(hideCard, 1000);
+                        console.log('different'); 
                     }
                 }
                 lastcardpicked = b;
             }
-}
+        }
 
-function messageText(message) {
-            console.log('message');
-            messageTop.innerHTML = message;
-            if (message != 'Find a match') {
-                mess = setInterval(messageText, 1000,);
-            }
-}
-
-function gameDone() {
-            if (gamescore < 0) {
-                gamescore = 0;
-            }
-            messageText("GAME OVER<BR>THANKS for PLAYING<BR>");
-            buttonmessage.innerHTML = "Click to Play Again";
-}
 
 function pickagain() {
             cardsflippedover = 0;
             fliparray = [];
             lastcardpicked = -1;
-            
-}
+            clearInterval(timer);
+        }
 
 function hideCard() {
             console.log(fliparray);
@@ -82,12 +76,14 @@ function hideCard() {
             pickagain();
 }
 
+// Card shuffle
+
 function shuffleArray(d) {
-            for (var c = d.length - 1; c > 0; c--) {
+    for (var c = d.length - 1; c > 0; c--) {
                 var b = Math.floor(Math.random() * (c + 1));
                 var a = d[c];
                 d[c] = d[b];
                 d[b] = a;
             }
             return d
-};
+        }

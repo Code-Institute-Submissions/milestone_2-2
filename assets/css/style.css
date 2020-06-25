@@ -1,6 +1,9 @@
+/* ---------- Header ------------- */
 .title {
     font-size: 50px;
 }
+
+/* ---------- Footer ------------- */
 
 ::placeholder {
     color: white !important;
@@ -9,6 +12,9 @@
 .subscribe {
     padding-bottom: 0;
 }
+
+/* ---------- Gameboard ------------- */
+
 
 .gametile {
             height: 200px;
@@ -31,3 +37,5 @@
             margin: 0 !important;
 }
         
+
+   
