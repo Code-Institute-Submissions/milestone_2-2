@@ -1,6 +1,6 @@
 # Dog Match Game
 
-Deployed app: ……………………..
+Deployed app:  https://heathergi85.github.io/milestone_2/
 
 ### The brief for this project was –
 
@@ -103,7 +103,7 @@ Having completed my project, I pushed to GitHub as the final stage of deployment
 ## Credits
 
 #### Content
-*	This project was written and altered using a tutorial by Laurence Svekis on Udemy. 
+*	This project was based on and modified using a tutorial by Laurence Svekis on Udemy. 
 *	Materialise was utilised for the styling of this project.
 *	Guidance on the layout and functions were obtained from queries on Slack.
 
@@ -111,12 +111,6 @@ Having completed my project, I pushed to GitHub as the final stage of deployment
 *	All photos used in this site are from Google Images.
 
 #### Acknowledgements
-*	This project was written and altered using a tutorial by Laurence Svekis on Udemy. 
-
-<<<<<<< HEAD
- 
-=======
- 
+*	This project was based on and modified using a tutorial by Laurence Svekis on Udemy. 
 
 
->>>>>>> e40404036b35a1b4c5532353ed87aa3f1111e109
