@@ -54,7 +54,7 @@ Please refer to the wireframes directory for individual page wireframes.
 
 **Gitpod** - used to write the project code.
 
-**Microsoft Word** – used to create the wireframes for the project.
+**Notepad** – used to create the wireframes for the project.
 
 **EmailJS** – used to send users email address to developer to add to subscription list.
 
